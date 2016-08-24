@@ -1,0 +1,57 @@
+# view AndroidManifest.xml #generated:12
+-keep class com.amap.cn.apis.ApiDemos { <init>(...); }
+
+# view AndroidManifest.xml #generated:117
+-keep class com.amap.cn.apis.busline.BusLineSearchDemo { <init>(...); }
+
+# view AndroidManifest.xml #generated:37
+-keep class com.amap.cn.apis.geocoder.GeocoderDemo { <init>(...); }
+
+# view AndroidManifest.xml #generated:61
+-keep class com.amap.cn.apis.location.LocationManager { <init>(...); }
+
+# view AndroidManifest.xml #generated:53
+-keep class com.amap.cn.apis.location.MyLocation { <init>(...); }
+
+# view AndroidManifest.xml #generated:21
+-keep class com.amap.cn.apis.mapview.GridMapView { <init>(...); }
+
+# view AndroidManifest.xml #generated:29
+-keep class com.amap.cn.apis.mapview.VectorMapView { <init>(...); }
+
+# view AndroidManifest.xml #generated:126
+-keep class com.amap.cn.apis.offlinemap.OfflineMapDemo { <init>(...); }
+
+# view AndroidManifest.xml #generated:81
+-keep class com.amap.cn.apis.overlay.ItemizedOverlayDemo { <init>(...); }
+
+# view AndroidManifest.xml #generated:99
+-keep class com.amap.cn.apis.overlay.MyLocationOverlayDemo { <init>(...); }
+
+# view AndroidManifest.xml #generated:90
+-keep class com.amap.cn.apis.overlay.OverlayDemo { <init>(...); }
+
+# view AndroidManifest.xml #generated:9
+-keep class com.amap.cn.apis.poisearch.MySuggestionProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:69
+-keep class com.amap.cn.apis.poisearch.PoiSearchDemo { <init>(...); }
+
+# view AndroidManifest.xml #generated:45
+-keep class com.amap.cn.apis.route.RouteDemo { <init>(...); }
+
+# view AndroidManifest.xml #generated:108
+-keep class com.amap.cn.apis.traffic.TrafficDemo { <init>(...); }
+
+# view res/layout/bussearch.xml #generated:62
+# view res/layout/geocoder.xml #generated:10
+# view res/layout/main.xml #generated:6
+# view res/layout/mapview.xml #generated:6
+# view res/layout/mylocationdemo.xml #generated:9
+# view res/layout/offlinemap.xml #generated:36
+# view res/layout/poisearch.xml #generated:7
+# view res/layout/route.xml #generated:7
+# view res/layout/traffic.xml #generated:6
+# view res/layout/vmapview.xml #generated:22
+-keep class com.amap.mapapi.map.MapView { <init>(...); }
+
