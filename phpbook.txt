@@ -1,3 +1,0 @@
-https://github.com/taozywu/phpbook/blob/master/6.1.md
-
-6.1 函数返回值

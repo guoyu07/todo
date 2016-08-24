@@ -12,6 +12,7 @@
 
 
 长期
+     phpBook坚持看。
      版本工具【git，hg】
      tp框架持续优化
      slim框架持续优化
