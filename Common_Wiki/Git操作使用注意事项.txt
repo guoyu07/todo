@@ -1,0 +1,33 @@
+0.git操作免密码使用说明
+  0.1首先请先保证进入到各自当前开发根目录下去
+  0.2 cat ~.sshid_rsa.pub  查看是否已经存在，如果没有请操作如下：
+       ssh-keygen -t rsa -C tao.wu@zerotech.com
+       xclip -sel clip  ~.sshid_rsa.pub 
+      如上操作应该是一路回车即可！最后在复制下.sshid_rsa.pub文件内容到gitlab中的ssh中即可“Add an SSH key”
+  0.3 vim  .gitconfig（各自仓库下），在clone代码时尽量使用ssh方式即可！
+    0.3.1处理如下：
+      [credential]
+          helper = store
+      [remote origin]
+          url = git@192.168.1.102PHP_Workweb_api.git
+1.git clone 或 git create
+2.记得一定先看下当前分支是master还是开发分支。大家切记master主干不要操作。master主干用来拉代码和发版用
+3.创建分支：git branch dev（你的分支）
+4.每次修改前一定记得git status （实时查看操作状态），如果有修改，阔以git diff查看修改差异。
+  然后git add 你的文件，也阔以这样（.代表所有要添加的文件）
+  然后git commit -c 提交描述
+5.如果想拉别人分支或主干，你阔以每次先git fetch origin (分支) 在 git merge （other branch），合并完记得看下 第4点。
+5.1（补充）：git pull origin master = git fetch 在 git merge的操作。但是不建议使用git pull
+#将远程的origin上的master分支下载下来并存放在本地tmp分支，如果tmp分支不存在则自动创建
+#然后将本地仓库跟tmp分支进行对比
+#如果没冲突那么将tmp分支合并到当前分支，否则先处理冲突后再合并！最后tmp分支阔以直接删掉也阔以保留！
+git fetch origin mastertmp
+git diff tmp 
+git merge tmp
+
+6.git push origin （master）或你的分支。
+7.切换分支 git checkout 某个分支。
+8.恢复某个文件 git checkout -- 你的文件
+9.删除远程仓库 git remote rm repository
+10.如果你是在本地创建仓库，则你需要git remote add 【git@192.168.1.100PHP_WorkTP.git】，你在push
+11.git revert HEAD     # 恢复最后一次提交的状态
