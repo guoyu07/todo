@@ -1,10 +1,4 @@
-﻿版本工具使用
-
-
-git 使用
-
-
-全局配置
+﻿全局配置
 ------------
 #配置使用git仓库的人员姓名 
 git config --global user.name "Your Name Comes Here" 
@@ -50,10 +44,31 @@ git config -l #列举所有配置
 4.每次修改前一定记得git status （实时查看操作状态），如果有修改，阔以git diff查看修改差异。
   然后git add 你的文件，也阔以这样（.代表所有要添加的文件）
   然后git commit -c "提交描述"
-5.如果想拉别人分支或主干，你阔以git merge （other branch），合并完记得看下 第4点。
+5.如果想拉别人分支或主干，你阔以每次先git fetch origin (分支) 在 git merge （other branch），合并完记得看下 第4点。
+
+5（补充）：git pull origin master = git fetch 在 git merge的操作。但是不建议使用git pull
+#将远程的origin上的master分支下载下来并存放在本地tmp分支，如果tmp分支不存在则自动创建
+#然后将本地仓库跟tmp分支进行对比
+#如果没冲突那么将tmp分支合并到当前分支，否则先处理冲突后再合并！最后tmp分支阔以直接删掉也阔以保留！
+git fetch origin master:tmp
+git diff tmp 
+git merge tmp
+
 6.git push origin （master）或你的分支。
 7.切换分支 git checkout 某个分支。
 8.恢复某个文件 git checkout -- 你的文件
 9.删除远程仓库 git remote rm <repository>
 10.如果你是在本地创建仓库，则你需要git remote add 【git@192.168.1.100:PHP_Work/TP.git】，你在push
+11.git revert HEAD     # 恢复最后一次提交的状态
+12.
+提交远程分支时，如发现有config-example 之外的配置文件提交到远程，请执行下面命令清除下缓存
+git rm -r --cached 文件名
+git add .
+git commit -m 'update .gitignore'
+
+
+回退
+
+git reflog
+git reset --hard Obfafd
 
